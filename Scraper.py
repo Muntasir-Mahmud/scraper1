@@ -1,6 +1,5 @@
 import requests
 from bs4 import BeautifulSoup
-import numpy as np
 import pandas as pd
 
 page = requests.get('https://azure.microsoft.com/en-us/updates/?fbclid=IwAR1QQq1lEofwzyZ5N8EPWUN8vBFackGSKHqHqDrL99TzCySiLEuvYhM_l9w')
@@ -22,4 +21,5 @@ all_headlines = pd.DataFrame(
 
     }
 )
-print(all_headlines)
+#print(all_headlines)
+all_headlines.to_csv('headline.csv')
